@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import buzz
+import Foundation
 
 class buzzTests: XCTestCase {
     
@@ -32,5 +32,4 @@ class buzzTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
-    
 }

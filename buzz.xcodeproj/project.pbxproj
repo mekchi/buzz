@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C5162F5E1D71C18900BB5596 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C54DA58E1D5C206300A82DC0 /* ObjectMapper.framework */; };
+		C5162F691D73385800BB5596 /* buzzPlayground-iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = C5162F681D73385800BB5596 /* buzzPlayground-iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C5162F6D1D73385900BB5596 /* buzzPlayground.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5162F661D73385800BB5596 /* buzzPlayground.framework */; };
+		C5162F6E1D73385900BB5596 /* buzzPlayground.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C5162F661D73385800BB5596 /* buzzPlayground.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C5162F731D7338BB00BB5596 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54DA59D1D5C408800A82DC0 /* Authentication.swift */; };
+		C5162F761D73393500BB5596 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C54DA58E1D5C206300A82DC0 /* ObjectMapper.framework */; };
 		C54DA5021D59D5E000A82DC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54DA5011D59D5E000A82DC0 /* AppDelegate.swift */; };
 		C54DA5041D59D5E000A82DC0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54DA5031D59D5E000A82DC0 /* ViewController.swift */; };
 		C54DA5071D59D5E000A82DC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C54DA5051D59D5E000A82DC0 /* Main.storyboard */; };
@@ -21,6 +27,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		C5162F5C1D71C17500BB5596 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C54DA5831D5C206300A82DC0 /* ObjectMapper.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 6AAC8F7519F03C2900E7A677;
+			remoteInfo = "ObjectMapper-iOS";
+		};
+		C5162F6B1D73385900BB5596 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C54DA4F61D59D5E000A82DC0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C5162F651D73385800BB5596;
+			remoteInfo = "buzzPlayground-iOS";
+		};
+		C5162F741D73392E00BB5596 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C54DA5831D5C206300A82DC0 /* ObjectMapper.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 6AAC8F7519F03C2900E7A677;
+			remoteInfo = "ObjectMapper-iOS";
+		};
 		C54DA5131D59D5E000A82DC0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C54DA4F61D59D5E000A82DC0 /* Project object */;
@@ -93,7 +120,25 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		C5162F721D73385900BB5596 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C5162F6E1D73385900BB5596 /* buzzPlayground.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		C5162F661D73385800BB5596 /* buzzPlayground.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = buzzPlayground.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5162F681D73385800BB5596 /* buzzPlayground-iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "buzzPlayground-iOS.h"; sourceTree = "<group>"; };
+		C5162F6A1D73385800BB5596 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C5162F781D733A7100BB5596 /* buzzPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = buzzPlayground.playground; sourceTree = "<group>"; };
 		C54DA4FE1D59D5E000A82DC0 /* buzz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = buzz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C54DA5011D59D5E000A82DC0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C54DA5031D59D5E000A82DC0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -110,14 +155,23 @@
 		C54DA57E1D5AF3F500A82DC0 /* APIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIRequest.swift; path = RemoteAPI/APIRequest.swift; sourceTree = "<group>"; };
 		C54DA5811D5AFD3C00A82DC0 /* JSONParse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSONParse.swift; path = RemoteAPI/JSONParse.swift; sourceTree = "<group>"; };
 		C54DA5831D5C206300A82DC0 /* ObjectMapper.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ObjectMapper.xcodeproj; path = "lib/ObjectMapper-master/ObjectMapper.xcodeproj"; sourceTree = "<group>"; };
-		C54DA59D1D5C408800A82DC0 /* Authentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
+		C54DA59D1D5C408800A82DC0 /* Authentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = Authentication.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		C5162F621D73385800BB5596 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5162F761D73393500BB5596 /* ObjectMapper.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C54DA4FB1D59D5E000A82DC0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5162F6D1D73385900BB5596 /* buzzPlayground.framework in Frameworks */,
 				C54DA59F1D5C43C400A82DC0 /* ObjectMapper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -126,6 +180,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5162F5E1D71C18900BB5596 /* ObjectMapper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,12 +194,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C5162F671D73385800BB5596 /* buzzPlayground-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				C5162F681D73385800BB5596 /* buzzPlayground-iOS.h */,
+				C5162F6A1D73385800BB5596 /* Info.plist */,
+			);
+			path = "buzzPlayground-iOS";
+			sourceTree = "<group>";
+		};
 		C54DA4F51D59D5E000A82DC0 = {
 			isa = PBXGroup;
 			children = (
+				C5162F781D733A7100BB5596 /* buzzPlayground.playground */,
 				C54DA5001D59D5E000A82DC0 /* buzz */,
 				C54DA5151D59D5E000A82DC0 /* buzzTests */,
 				C54DA5201D59D5E000A82DC0 /* buzzUITests */,
+				C5162F671D73385800BB5596 /* buzzPlayground-iOS */,
 				C54DA4FF1D59D5E000A82DC0 /* Products */,
 				C54DA5831D5C206300A82DC0 /* ObjectMapper.xcodeproj */,
 			);
@@ -156,6 +222,7 @@
 				C54DA4FE1D59D5E000A82DC0 /* buzz.app */,
 				C54DA5121D59D5E000A82DC0 /* buzzTests.xctest */,
 				C54DA51D1D59D5E000A82DC0 /* buzzUITests.xctest */,
+				C5162F661D73385800BB5596 /* buzzPlayground.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -218,7 +285,37 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		C5162F631D73385800BB5596 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5162F691D73385800BB5596 /* buzzPlayground-iOS.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		C5162F651D73385800BB5596 /* buzzPlayground-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C5162F6F1D73385900BB5596 /* Build configuration list for PBXNativeTarget "buzzPlayground-iOS" */;
+			buildPhases = (
+				C5162F611D73385800BB5596 /* Sources */,
+				C5162F621D73385800BB5596 /* Frameworks */,
+				C5162F631D73385800BB5596 /* Headers */,
+				C5162F641D73385800BB5596 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C5162F751D73392E00BB5596 /* PBXTargetDependency */,
+			);
+			name = "buzzPlayground-iOS";
+			productName = "buzzPlayground-iOS";
+			productReference = C5162F661D73385800BB5596 /* buzzPlayground.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		C54DA4FD1D59D5E000A82DC0 /* buzz */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C54DA5261D59D5E000A82DC0 /* Build configuration list for PBXNativeTarget "buzz" */;
@@ -226,11 +323,13 @@
 				C54DA4FA1D59D5E000A82DC0 /* Sources */,
 				C54DA4FB1D59D5E000A82DC0 /* Frameworks */,
 				C54DA4FC1D59D5E000A82DC0 /* Resources */,
+				C5162F721D73385900BB5596 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				C54DA5A11D5C43DB00A82DC0 /* PBXTargetDependency */,
+				C5162F6C1D73385900BB5596 /* PBXTargetDependency */,
 			);
 			name = buzz;
 			productName = buzz;
@@ -241,13 +340,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C54DA5291D59D5E000A82DC0 /* Build configuration list for PBXNativeTarget "buzzTests" */;
 			buildPhases = (
-				C54DA50E1D59D5E000A82DC0 /* Sources */,
 				C54DA50F1D59D5E000A82DC0 /* Frameworks */,
+				C54DA50E1D59D5E000A82DC0 /* Sources */,
 				C54DA5101D59D5E000A82DC0 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				C5162F5D1D71C17500BB5596 /* PBXTargetDependency */,
 				C54DA5141D59D5E000A82DC0 /* PBXTargetDependency */,
 			);
 			name = buzzTests;
@@ -283,6 +383,9 @@
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = mekchi;
 				TargetAttributes = {
+					C5162F651D73385800BB5596 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
 					C54DA4FD1D59D5E000A82DC0 = {
 						CreatedOnToolsVersion = 7.3.1;
 					};
@@ -318,6 +421,7 @@
 				C54DA4FD1D59D5E000A82DC0 /* buzz */,
 				C54DA5111D59D5E000A82DC0 /* buzzTests */,
 				C54DA51C1D59D5E000A82DC0 /* buzzUITests */,
+				C5162F651D73385800BB5596 /* buzzPlayground-iOS */,
 			);
 		};
 /* End PBXProject section */
@@ -375,6 +479,13 @@
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
+		C5162F641D73385800BB5596 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C54DA4FC1D59D5E000A82DC0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -402,6 +513,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		C5162F611D73385800BB5596 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5162F731D7338BB00BB5596 /* Authentication.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C54DA4FA1D59D5E000A82DC0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -433,6 +552,21 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		C5162F5D1D71C17500BB5596 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "ObjectMapper-iOS";
+			targetProxy = C5162F5C1D71C17500BB5596 /* PBXContainerItemProxy */;
+		};
+		C5162F6C1D73385900BB5596 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C5162F651D73385800BB5596 /* buzzPlayground-iOS */;
+			targetProxy = C5162F6B1D73385900BB5596 /* PBXContainerItemProxy */;
+		};
+		C5162F751D73392E00BB5596 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "ObjectMapper-iOS";
+			targetProxy = C5162F741D73392E00BB5596 /* PBXContainerItemProxy */;
+		};
 		C54DA5141D59D5E000A82DC0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = C54DA4FD1D59D5E000A82DC0 /* buzz */;
@@ -470,6 +604,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		C5162F701D73385900BB5596 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "buzzPlayground-iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mekchi.buzzPlayground-iOS";
+				PRODUCT_NAME = buzzPlayground;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C5162F711D73385900BB5596 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "buzzPlayground-iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mekchi.buzzPlayground-iOS";
+				PRODUCT_NAME = buzzPlayground;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		C54DA5241D59D5E000A82DC0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -559,6 +731,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = buzz/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -572,6 +745,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = buzz/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -584,7 +758,6 @@
 		C54DA52A1D59D5E000A82DC0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = buzzTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mekchi.buzzTests;
@@ -596,7 +769,6 @@
 		C54DA52B1D59D5E000A82DC0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = buzzTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mekchi.buzzTests;
@@ -630,6 +802,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		C5162F6F1D73385900BB5596 /* Build configuration list for PBXNativeTarget "buzzPlayground-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C5162F701D73385900BB5596 /* Debug */,
+				C5162F711D73385900BB5596 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		C54DA4F91D59D5E000A82DC0 /* Build configuration list for PBXProject "buzz" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

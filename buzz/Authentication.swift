@@ -12,6 +12,11 @@ struct AuthenticationDataIn : Mappable {
     var username : String?
     var password : String?
     
+    init(username: String, password: String) {
+        self.username = username
+        self.password = password
+    }
+    
     init?(_ map: Map) {
         
     }
@@ -21,6 +26,7 @@ struct AuthenticationDataIn : Mappable {
         password    <- map["password"]
     }
 }
+
 
 
 	
