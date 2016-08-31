@@ -24,6 +24,8 @@
 		C54DA5821D5AFD3C00A82DC0 /* JSONParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54DA5811D5AFD3C00A82DC0 /* JSONParse.swift */; };
 		C54DA59E1D5C408800A82DC0 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54DA59D1D5C408800A82DC0 /* Authentication.swift */; };
 		C54DA59F1D5C43C400A82DC0 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C54DA58E1D5C206300A82DC0 /* ObjectMapper.framework */; };
+		C59E87751D76C004002294C7 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54DA57E1D5AF3F500A82DC0 /* APIRequest.swift */; };
+		C59E87761D76CCD6002294C7 /* buzzPlayground.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5162F661D73385800BB5596 /* buzzPlayground.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -180,6 +182,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C59E87761D76CCD6002294C7 /* buzzPlayground.framework in Frameworks */,
 				C5162F5E1D71C18900BB5596 /* ObjectMapper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -517,6 +520,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C59E87751D76C004002294C7 /* APIRequest.swift in Sources */,
 				C5162F731D7338BB00BB5596 /* Authentication.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -809,6 +813,7 @@
 				C5162F711D73385900BB5596 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C54DA4F91D59D5E000A82DC0 /* Build configuration list for PBXProject "buzz" */ = {
 			isa = XCConfigurationList;

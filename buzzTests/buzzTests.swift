@@ -9,6 +9,8 @@
 import XCTest
 import Foundation
 
+@testable import buzzPlayground
+
 class buzzTests: XCTestCase {
     
     override func setUp() {
@@ -31,5 +33,14 @@ class buzzTests: XCTestCase {
         self.measureBlock {
             // Put the code you want to measure the time of here.
         }
+    }
+    
+    func test() {
+        let api: APIRequest = APIRequest(path: "http://localhost/~mekchi/api/login.php");
+        
+        api.test({(s: String) -> () in
+            print(s)
+        })
+
     }
 }
