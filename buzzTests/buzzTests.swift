@@ -38,9 +38,12 @@ class buzzTests: XCTestCase {
     func test() {
         let api: APIRequest = APIRequest(path: "http://localhost/~mekchi/api/login.php");
         
-        api.test({(s: String) -> () in
-            print(s)
-        })
+        api.test { (str) in
+            print(str)
+            }
+//        api.test({(s: String) -> () in
+//            print(s)
+//        })
 
     }
 }

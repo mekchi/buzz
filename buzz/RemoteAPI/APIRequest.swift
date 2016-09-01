@@ -6,6 +6,7 @@
 //  Copyright © 2016 mekchi. All rights reserved.
 //
 
+import Alamofire
 import ObjectMapper
 
 import Foundation
@@ -19,9 +20,50 @@ public class APIRequest {
     }
     
     
-    func test(finished:(String)->()) {
+    func test(completionHandler: (String?) -> ()) ->() {
         
-        var result:String! = "1"
+        let url = NSURL(string: "http://localhost/~mekchi/api/login.php")!
+        var request = NSMutableURLRequest(URL : url)
+        request.HTTPMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        let values = [
+            "username": "aibol",
+            "password": "12345"
+        ]
+        
+        //let dictionary: NSDictionary = ["tag":"login", "username":"aibol", "password":"12345"]
+        //let json = Mapper<AuthenticationDataIn>().map(dictionary)
+        
+        //request.HTTPBody = try NSJSONSerialization.dataWithJSONObject(dictionary, options: .PrettyPrinted)
+        //request.HTTPBody = json?.toJSONString()?.dataUsingEncoding(NSUTF8StringEncoding)
+        
+        request.HTTPBody = try! NSJSONSerialization.dataWithJSONObject(values, options: [])
+        
+        Alamofire.request(request)
+            .responseJSON { response in
+                // do whatever you want here
+                switch response.result {
+                case .Failure(let error):
+                    completionHandler(error.localizedDescription)
+                    
+                    // if web service reports error, sometimes the body of the response
+                    // includes description of the nature of the problem, e.g.
+                    
+                    if let data = response.data, let responseString = String(data: data, encoding: NSUTF8StringEncoding) {
+                        completionHandler(responseString)
+                    }
+                case .Success(let responseObject):
+                    completionHandler(responseObject.absoluteString)
+                }
+                
+        }
+        
+        
+        
+        
+        
+        /*var result:String! = "1"
         
         if m_url != nil {
             
@@ -71,7 +113,7 @@ public class APIRequest {
             
             task.resume()
            // UIApplication.sharedApplication().networkActivityIndicatorVisible = true
-        }
+        }*/
     }
 
 }
