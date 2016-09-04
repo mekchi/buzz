@@ -13,6 +13,8 @@
 		C5162F6E1D73385900BB5596 /* buzzPlayground.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C5162F661D73385800BB5596 /* buzzPlayground.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C5162F731D7338BB00BB5596 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54DA59D1D5C408800A82DC0 /* Authentication.swift */; };
 		C5162F761D73393500BB5596 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C54DA58E1D5C206300A82DC0 /* ObjectMapper.framework */; };
+		C54BA8111D7C998B00A5625E /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C54BA8101D7C998B00A5625E /* logo.png */; };
+		C54BA8121D7C99AB00A5625E /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C54BA8101D7C998B00A5625E /* logo.png */; };
 		C54DA5021D59D5E000A82DC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54DA5011D59D5E000A82DC0 /* AppDelegate.swift */; };
 		C54DA5041D59D5E000A82DC0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54DA5031D59D5E000A82DC0 /* ViewController.swift */; };
 		C54DA5071D59D5E000A82DC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C54DA5051D59D5E000A82DC0 /* Main.storyboard */; };
@@ -194,6 +196,7 @@
 		C5162F681D73385800BB5596 /* buzzPlayground-iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "buzzPlayground-iOS.h"; sourceTree = "<group>"; };
 		C5162F6A1D73385800BB5596 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C5162F781D733A7100BB5596 /* buzzPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = buzzPlayground.playground; sourceTree = "<group>"; };
+		C54BA8101D7C998B00A5625E /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		C54DA4FE1D59D5E000A82DC0 /* buzz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = buzz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C54DA5011D59D5E000A82DC0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C54DA5031D59D5E000A82DC0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -262,17 +265,26 @@
 			path = "buzzPlayground-iOS";
 			sourceTree = "<group>";
 		};
+		C54BA80F1D7C998B00A5625E /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				C54BA8101D7C998B00A5625E /* logo.png */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
 		C54DA4F51D59D5E000A82DC0 = {
 			isa = PBXGroup;
 			children = (
-				C59E87771D77EF7E002294C7 /* Alamofire.xcodeproj */,
 				C5162F781D733A7100BB5596 /* buzzPlayground.playground */,
+				C59E87771D77EF7E002294C7 /* Alamofire.xcodeproj */,
+				C54DA5831D5C206300A82DC0 /* ObjectMapper.xcodeproj */,
 				C54DA5001D59D5E000A82DC0 /* buzz */,
+				C5162F671D73385800BB5596 /* buzzPlayground-iOS */,
 				C54DA5151D59D5E000A82DC0 /* buzzTests */,
 				C54DA5201D59D5E000A82DC0 /* buzzUITests */,
-				C5162F671D73385800BB5596 /* buzzPlayground-iOS */,
 				C54DA4FF1D59D5E000A82DC0 /* Products */,
-				C54DA5831D5C206300A82DC0 /* ObjectMapper.xcodeproj */,
+				C54BA80F1D7C998B00A5625E /* resources */,
 			);
 			sourceTree = "<group>";
 		};
@@ -610,6 +622,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C54BA8121D7C99AB00A5625E /* logo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -617,6 +630,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C54BA8111D7C998B00A5625E /* logo.png in Resources */,
 				C54DA50C1D59D5E000A82DC0 /* LaunchScreen.storyboard in Resources */,
 				C54DA5091D59D5E000A82DC0 /* Assets.xcassets in Resources */,
 				C54DA5071D59D5E000A82DC0 /* Main.storyboard in Resources */,
