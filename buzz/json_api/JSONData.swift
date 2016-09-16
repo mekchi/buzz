@@ -15,7 +15,7 @@ protocol JSONData : Mappable {
 }
 
 /* ----------------------------------------------- */
-class BasicRespose : JSONData {
+class BasicResponse : JSONData {
     var status: String?
     var message: String?
     
@@ -29,7 +29,7 @@ class BasicRespose : JSONData {
     }
 }
 /* ----------------------------------------------- */
-class AuthResponse : BasicRespose {
+class AuthResponse : BasicResponse {
     var clientID: String?
     var companyID: String?
     var companyLogo: String?
@@ -53,8 +53,27 @@ class AuthResponse : BasicRespose {
     }
 }
 /* ----------------------------------------------- */
-class MessageList : BasicRespose {
-    var messages: [String]?
+class Message : Mappable {
+    var id: String?;
+    var message_from_id: String?;
+    var message_date: String?
+    var message_content: String?
+    
+    required init?(_ map: Map) {
+    }
+    
+    func mapping(map: Map) {
+        
+        id              <- map["id"]
+        message_from_id <- map["message_from_id"]
+        message_date    <- map["message_date"]
+        message_content <- map["message_content"]
+    }
+}
+
+
+class MessageListResponse : BasicResponse {
+    var array: String?//[Message]?
     
     required init?(_ map: Map) {
         super.init(map)
@@ -63,9 +82,9 @@ class MessageList : BasicRespose {
     override func mapping(map: Map) {
         super.mapping(map)
         
-        messages            <- map["client_id"]
-
+        array            <- map["array"]
     }
 }
+/* ----------------------------------------------- */
 
 

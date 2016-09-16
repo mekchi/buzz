@@ -17,15 +17,22 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         // Insert code here to initialize your application
         
-        let url = "http://localhost/~mekchi/api/login.php"
+//        let url = "http://localhost/~mekchi/api/login.php"
+        let url = "http://localhost/~mekchi/api/get_messages.php"
+        
+//        let values = [
+//            "username": "aibol",
+//            "password": "12345"
+//        ]
         
         let values = [
-            "username": "aibol",
+            "client_id": "104",
             "password": "12345"
         ]
         
-        func responseHandler(response: AuthResponse?) {
+        func responseHandler(response: MessageListResponse?) {
             print(response?.message)
+            print(response?.toJSONString())
         }
         
         func errorHandler(error: NSError?) {

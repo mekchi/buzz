@@ -17,7 +17,7 @@ class APIRequest {
     static func requestPOST<T: JSONData>(url: URLStringConvertible,
                             data: [String: String]!,
                             responseHandler: (T?) -> Void,
-                            errorHandler: (NSError?) -> Void) {
+                            errorHandler: 	(NSError?) -> Void) {
         
         Alamofire.request(.POST, url, parameters: data).responseObject {
             (response: Response<T, NSError>) -> Void in
@@ -27,8 +27,14 @@ class APIRequest {
                 errorHandler(response.result.error)
             }
         }
+    }
+    
+    static func getMessages() {
+        
         
     }
+        
+
     
 //    func requestPOST(data: [String: String]!) -> BasicRespose? {
 //        var result : BasicRespose?
